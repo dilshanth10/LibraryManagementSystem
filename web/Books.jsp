@@ -568,33 +568,43 @@
                 $("#addBookForm").validate({
                     rules: {
                         "bookId": {
-                            required: true
-                                    //minlength: 5
+                            required: true,
+                            maxlength: 10
+                            //minlength: 5
                         },
                         "bookTitle": {
-                            required: true
+                            required: true,
+                            maxlength: 45
                                     //email: true
                         },
                         "bookAuthor": {
-                            required: true
+                            required: true,
+                            maxlength: 45
                         },
                         "addBookMainClassification": {
-                            required: true
+                            required: true,
+                            maxlength: 45
                         },
                         "addBookSubClassification": {
-                            required: true
+                            required: true,
+                            maxlength: 45
                         },
                         "addBookPublishYear": {
-                            required: true
+                            required: true,
+                            maxlength: 45
                         },
                         "addBookLastPrintYear": {
-                            required: true
+                            required: true,
+                            maxlength: 45
                         },
                         "isbn": {
-                            required: true
+                            required: true,
+                            maxlength: 45
                         },
                         "noofpages": {
-                            required: true
+                            required: true,
+                            digits: true,
+                            maxlength: 5
                         }
                     },
                     messages: {
@@ -617,29 +627,37 @@
                 $("#editBookForm").validate({
                     rules: {
                         "editBookTitle": {
-                            required: true
+                            required: true,
+                            maxlength: 45
                                     //email: true
                         },
                         "editBookAuthor": {
-                            required: true
+                            required: true,
+                            maxlength: 45
                         },
                         "editBookMainClassification": {
-                            required: true
+                            required: true,
+                            maxlength: 45
                         },
                         "editBookSubClassification": {
-                            required: true
+                            required: true,
+                            maxlength: 45
                         },
                         "editBookPublishYear": {
-                            required: true
+                            required: true,
+                            maxlength: 45
                         },
                         "editBookLastPrintYear": {
-                            required: true
+                            required: true,
+                            maxlength: 45
                         },
                         "editISBN": {
-                            required: true
+                            required: true,
+                            maxlength: 45
                         },
                         "editNoOfPages": {
-                            required: true
+                            required: true,
+                            digits: true
                         }
                     },
                     messages: {

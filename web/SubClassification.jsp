@@ -342,13 +342,15 @@
                 $("#addSubClassificationForm").validate({
                     rules: {
                         "subClassificationId": {
-                            required: true
+                            required: true,
+                            maxlength: 10
                         },
                         "addSubClassificationMainClassification": {
                             required: true
                         },
                         "subClassificationName":{
-                            required: true
+                            required: true,
+                            maxlength: 45
                         }
                     },
                     errorPlacement: function (error, element) { }
@@ -360,7 +362,8 @@
                             required: true
                         },
                         "editSubClassificationName":{
-                            required: true
+                            required: true,
+                            maxlength: 45
                         }
                     },
                     errorPlacement: function (error, element) { }

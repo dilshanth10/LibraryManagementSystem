@@ -229,10 +229,12 @@
                 $("#addMainClassificationForm").validate({
                     rules: {
                         "mainClassificationId": {
-                            required: true
+                            required: true,
+                            maxlength: 10
                         },
                         "mainClassificationName": {
-                            required: true
+                            required: true,
+                            maxlength: 45
                         }
                     },
                     errorPlacement: function (error, element) { }
@@ -241,7 +243,8 @@
                 $("#editMainClassificationForm").validate({
                     rules: {
                         "editMainClassificationName": {
-                            required: true
+                            required: true,
+                            maxlength: 45
                         }
                     },
                     errorPlacement: function (error, element) { }
