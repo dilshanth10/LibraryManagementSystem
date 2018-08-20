@@ -354,6 +354,19 @@
                     errorPlacement: function (error, element) { }
                 });
 
+                $("#editSubClassificationForm").validate({
+                    rules: {
+                        "editSubClassificationMainClassification": {
+                            required: true
+                        },
+                        "editSubClassificationName":{
+                            required: true
+                        }
+                    },
+                    errorPlacement: function (error, element) { }
+                });
+
+
                 $("#subClassificationId").focusout(function () {
                     var subClassificationId = this.value;
 
@@ -503,7 +516,7 @@
         <div id="editSubClassificationModal" class="modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form method="get" action="EditSubClassificationController">
+                    <form method="get" id="editSubClassificationForm" action="EditSubClassificationController">
                         <div class="modal-header">
                             <h4 class="modal-title">Edit Sub Classification</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -517,7 +530,7 @@
                             <div class="form-group">
                                 <label>Main Classification</label>
                                 <select class="form-control" style="margin-bottom:20px;" id="editSubClassificationMainClassification" name="editSubClassificationMainClassification">
-                                    <option>Main Classification</option>
+                                    <option value="">Select Main Classification</option>
                                 </select>
                             </div>
                             <div class="form-group">
